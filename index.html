@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>PinaCareerHub: Uniting Jobseeker, Recruiters and Employers</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#index">PinaCareerHub</a></div>
+                <ul class="links">
+                    <li><a href="#index">Home</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <li><a href="#jobseeker" class="action_btn">Jobseeker</a>
+                    <a href="#admin" class="action_btn">Employer/Recruiter</a></li>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#index">Home</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#jobseeker" class="action_btn">Jobseeker</a></li>
+                <li><a href="#admin" class="action_btn">Employer/Recruiter</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Distinctio eaque corrupti quos? <br /> Nam harum at assumenda officiis alias repudiandae similique et dolor odit aperiam, sapiente, laudantium laboriosam iure, qui cum?</p>
+            </section>
+        </main>
+
+        <section>
+            <div>
+                <p>Contact</p>
+                <h1>Visit Shop Today</h1>
+            </div>
+            <div class="footer-row"></div>
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+                <p></p>
+            </div>
+            <div>
+                <h1>Get In Touch</h1>
+            </div>
+        </section>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>
